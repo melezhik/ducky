@@ -17,23 +17,30 @@ Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers
         }
       },
       {
-        "task" : "start nginx service",
-        "plugin" : "service",
+        "task" : "stop nginx service",
+        "plugin" : "bash",
         "data" : {
-            "action" : "start",
-            "service" : "nginx"
+          "command" : "if test -f /run/nginx.pid; then kill `cat /run/nginx.pid`; fi",
+          "debug" : true
+        }
+      },
+      {
+        "task" : "start nginx service",
+        "plugin" : "bash",
+        "data" : {
+          "command" : "nginx"
         }
       },
       {
         "task" : "check nginx",
         "plugin" : "bash",
         "data" : {
-          "command" : "curl -f -L 127.0.0.1"
+          "command" : "curl -D - -f -L 127.0.0.1 -o /dev/null"
         }
       }
     
     ]
-        
+            
 
     # run once and then exit
     docker pull jdeathe/centos-ssh
