@@ -2,6 +2,11 @@
 
 Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers
 
+# INSTALL
+
+    git clone https://github.com/melezhik/ducky.git
+    PATH=$PWD:$PATH # add ./ducky.bash to the system PATH
+
 # USAGE
 
 
@@ -44,17 +49,17 @@ Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers
 
     # run once and then exit
     docker pull jdeathe/centos-ssh
-    ./ducky.bash jdeathe/centos-ssh
+    ducky.bash jdeathe/centos-ssh
 
     # run against existed container
     docker run -d -v $PWD:/var/ducky --name ducky jdeathe/centos-ssh bash
-    ./ducky.bash ducky
+    ducky.bash ducky
 
 # Examles
 
 Find more examples at `./examples` directory. To run example use `DUCKYFILE` varibale:
 
-    DUCKYFILE=examples/rvm/ducky.json ./ducky.bash ${image_id}
+    DUCKYFILE=examples/rvm/ducky.json ducky.bash ${image_id}
 
 
 # Author 
