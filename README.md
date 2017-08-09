@@ -1,6 +1,6 @@
 # SYNOPSIS
 
-Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers
+Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers.
 
 # INSTALL
 
