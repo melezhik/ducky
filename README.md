@@ -55,9 +55,9 @@ Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers.
     docker run -d -v $PWD:/var/ducky --name ducky jdeathe/centos-ssh bash
     ducky.bash ducky
 
-# Examles
+# Examples
 
-Find more examples at `./examples` directory. To run example use `DUCKYFILE` varibale:
+Find more examples at `./examples` directory. To run example use `DUCKYFILE` variable:
 
     DUCKYFILE=examples/rvm/ducky.json ducky.bash ${image_id}
 
