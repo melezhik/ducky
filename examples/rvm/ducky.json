@@ -1,0 +1,18 @@
+[
+
+  {
+    "task" : "install tools",
+    "plugin" : "package-generic",
+    "data" : {
+        "list" : "which"
+    }
+  },
+  {
+    "task" : "install ruby with rvm",
+    "plugin" : "rvm",
+    "data" : {
+        "ruby_version" : "2.1.2"
+    }
+  }
+
+]
