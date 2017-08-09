@@ -1,0 +1,17 @@
+[
+
+  {
+    "task" : "install App::cpm",
+    "plugin" : "cpan-package",
+    "data" : {
+        "list" : "App::cpm"
+    }
+  },
+  {
+    "task" : "install CPAN modules",
+    "plugin" : "app-cpm",
+    "data" : {
+        "list" : "CGI DBI Moose"
+    }
+  }
+]
