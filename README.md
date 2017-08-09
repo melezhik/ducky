@@ -55,6 +55,10 @@ Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers.
     docker run -d -v $PWD:/var/ducky --name ducky jdeathe/centos-ssh bash
     ducky.bash ducky
 
+# Ascii cast
+
+[![asciicast](https://asciinema.org/a/132694.png)](https://asciinema.org/a/132694)
+
 # Examples
 
 Find more examples at `./examples` directory. To run example use `DUCKYFILE` variable:
