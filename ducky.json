@@ -1,24 +1,25 @@
 [
 
   {
-    "task" : "disk check",
-    "plugin" : "df-check",
+    "task" : "install nginx",
+    "plugin" : "package-generic",
     "data" : {
-        "threshold" : 95
+        "list" : "nginx"
     }
   },
   {
-    "task" : "disk check",
-    "plugin" : "df-check",
+    "task" : "start nginx service",
+    "plugin" : "service",
     "data" : {
-        "threshold" : 95
+        "action" : "start",
+        "service" : "nginx"
     }
   },
   {
-    "task" : "test plugin",
-    "plugin" : "foo-generic",
+    "task" : "check nginx",
+    "plugin" : "bash",
     "data" : {
-
+      "command" : "curl -f -L 127.0.0.1"
     }
   }
 
