@@ -1,0 +1,10 @@
+[
+
+  {
+    "task" : "install CPAN modules",
+    "plugin" : "cpan-package",
+    "data" : {
+        "list" : "HTTP::Tiny Config::Tiny"
+    }
+  }
+]
