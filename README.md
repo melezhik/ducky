@@ -5,7 +5,7 @@ Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers
 # INSTALL
 
     git clone https://github.com/melezhik/ducky.git
-    PATH=$PWD:$PATH # add ./ducky.bash to the system PATH
+    PATH=$PWD/ducky:$PATH # add ducky.bash to the system PATH
 
 # USAGE
 
