@@ -1,0 +1,10 @@
+[
+
+  {
+    "task" : "install chef client",
+    "plugin" : "bash",
+    "data" : {
+        "command" : "if ! chef-client --version 2>/dev/null; then curl -L https://omnitruck.chef.io/install.sh | bash; fi"
+    }
+  }
+]
