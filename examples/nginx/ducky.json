@@ -4,15 +4,7 @@
     "task" : "install nginx",
     "plugin" : "package-generic",
     "data" : {
-        "list" : "epel-release nginx"
-    }
-  },
-  {
-    "task" : "enable nginx service",
-    "plugin" : "service",
-    "data" : {
-      "service" : "nginx",
-      "action" : "enable"
+        "list" : "nginx"
     }
   },
   {
