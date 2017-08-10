@@ -1,0 +1,41 @@
+[
+
+  {
+    "task" : "install nginx",
+    "plugin" : "package-generic",
+    "data" : {
+        "list" : "epel-release nginx"
+    }
+  },
+  {
+    "task" : "enable nginx service",
+    "plugin" : "service",
+    "data" : {
+      "service" : "nginx",
+      "action" : "enable"
+    }
+  },
+  {
+    "task" : "start nginx service",
+    "plugin" : "service",
+    "data" : {
+      "service" : "nginx",
+      "action" : "start"
+    }
+  },
+  {
+    "task" : "check nginx http",
+    "plugin" : "bash",
+    "data" : {
+      "command" : "curl -D - -f -L 127.0.0.1 -o /dev/null"
+    }
+  },
+  {
+    "task" : "check nginx service",
+    "plugin" : "proc-validate",
+    "data" : {
+      "footprint" : "nginx.*master"
+    }
+  }
+
+]
