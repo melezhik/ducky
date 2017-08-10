@@ -4,6 +4,8 @@ else
   duckyfile="/var/ducky/$DUCKYFILE"
 fi
 
+workdir=$(dirname "$duckyfile")
+
 echo run ducky from $duckyfile ...
 
 if docker ps -f name=$1 | grep -q -w $1; then
@@ -13,10 +15,10 @@ if docker ps -f name=$1 | grep -q -w $1; then
   if test -z $DUCKY_SKIP_BOOTSTRAP; then
     docker exec $1 \
     bash -c "curl -s -k -L -o - https://sparrowhub.org/bootstrap.sh | \
-    bash && sparrow index update && sparrow box run $duckyfile"
+    bash && export OUTTHENTIC_CWD=$workdir && sparrow index update && sparrow box run $duckyfile"
   else
     docker exec $1 \
-    bash -c "sparrow index update && sparrow box run $duckyfile"
+    bash -c " export OUTTHENTIC_CWD=$workdir && sparrow index update && sparrow box run $duckyfile"
   fi
 
 else
@@ -26,10 +28,10 @@ else
   if test -z $DUCKY_SKIP_BOOTSTRAP; then
     docker run  -v $PWD:/var/ducky -it --entrypoint="" $1 \
     bash -c "curl -s -k -L -o - https://sparrowhub.org/bootstrap.sh | \
-    bash && sparrow index update && sparrow box run $duckyfile"
+    bash &&  export OUTTHENTIC_CWD=$workdir && sparrow index update && sparrow box run $duckyfile"
   else
     docker run  -v $PWD:/var/ducky -it --entrypoint="" $1 \
-    bash -c "sparrow index update && sparrow box run $duckyfile"  
+    bash -c " export OUTTHENTIC_CWD=$workdir && sparrow index update && sparrow box run $duckyfile"  
   fi   
 
 fi
