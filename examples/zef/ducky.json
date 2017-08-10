@@ -7,7 +7,7 @@
     }
   },
   {
-    "task" : "install Sparrowdo from source",
+    "task" : "install module from the source",
     "plugin" : "zef",
     "data" : {
       "list" : [
