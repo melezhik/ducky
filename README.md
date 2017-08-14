@@ -59,6 +59,15 @@ Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers.
 
 [![asciicast](https://asciinema.org/a/132694.png)](https://asciinema.org/a/132694)
 
+# Advanced usage
+
+## Skip sparrow client bootstrap phase
+
+Use `DUCKY_SKIP_BOOTSTRAP` environment variable to omit sparrow bootstrap phase:
+
+     DUCKY_SKIP_BOOTSTRAP=1 duck.bash ...
+
+
 # Examples
 
 Find more examples at `./examples` directory. To run example use `DUCKYFILE` variable:
