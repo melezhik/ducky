@@ -65,7 +65,7 @@ Run [sparrow](https://github.com/melezhik/sparrow) tasks on docker containers.
 
 Use `DUCKY_SKIP_BOOTSTRAP` environment variable to omit sparrow bootstrap phase:
 
-     DUCKY_SKIP_BOOTSTRAP=1 duck.bash ...
+     DUCKY_SKIP_BOOTSTRAP=1 ducky.bash ...
 
 
 # Examples
